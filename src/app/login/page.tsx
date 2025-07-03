@@ -86,6 +86,11 @@ export default function Login() {
                 className="mt-1 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500 focus:z-10 sm:text-sm"
                 placeholder="Enter your password"
               />
+              <div className="text-right mt-1">
+                <Link href="/forgot-password" className="text-sm text-orange-600 hover:text-orange-500">
+                  Forgot your password?
+                </Link>
+              </div>
             </div>
           </div>
 

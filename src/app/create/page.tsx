@@ -140,7 +140,7 @@ export default function CreateRecipe() {
               name="title"
               value={formData.title}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500  text-black"
               placeholder="Enter recipe title"
               required
             />
@@ -155,7 +155,7 @@ export default function CreateRecipe() {
               name="cuisine"
               value={formData.cuisine}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500  text-black"
               required
             >
               <option value="">Select cuisine</option>
@@ -183,7 +183,7 @@ export default function CreateRecipe() {
             value={formData.description}
             onChange={handleInputChange}
             rows={3}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500  text-black"
             placeholder="Describe your recipe..."
             required
           />
@@ -202,7 +202,7 @@ export default function CreateRecipe() {
               value={formData.cookingTime}
               onChange={handleInputChange}
               min="1"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500  text-black"
               required
             />
           </div>
@@ -218,7 +218,7 @@ export default function CreateRecipe() {
               value={formData.servings}
               onChange={handleInputChange}
               min="1"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500  text-black"
               required
             />
           </div>
@@ -232,7 +232,7 @@ export default function CreateRecipe() {
               name="difficulty"
               value={formData.difficulty}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500  text-black"
             >
               <option value="Easy">Easy</option>
               <option value="Medium">Medium</option>
@@ -253,7 +253,7 @@ export default function CreateRecipe() {
                   type="text"
                   value={ingredient}
                   onChange={(e) => handleArrayInputChange(index, 'ingredients', e.target.value)}
-                  className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+                  className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500  text-black"
                   placeholder={`Ingredient ${index + 1}`}
                   required
                 />
@@ -261,7 +261,7 @@ export default function CreateRecipe() {
                   <button
                     type="button"
                     onClick={() => removeArrayItem(index, 'ingredients')}
-                    className="px-3 py-2 text-red-600 hover:bg-red-50 rounded-md transition-colors"
+                    className="px-3 py-2 text-red-600 hover:bg-red-50 rounded-md transition-colors "
                   >
                     Remove
                   </button>
@@ -271,7 +271,7 @@ export default function CreateRecipe() {
             <button
               type="button"
               onClick={() => addArrayItem('ingredients')}
-              className="text-orange-600 hover:text-orange-700 text-sm font-medium"
+              className="text-orange-600 hover:text-orange-700 text-sm font-medium "
             >
               + Add Ingredient
             </button>
@@ -292,7 +292,7 @@ export default function CreateRecipe() {
                     value={instruction}
                     onChange={(e) => handleArrayInputChange(index, 'instructions', e.target.value)}
                     rows={2}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500  text-black"
                     placeholder={`Step ${index + 1} instructions...`}
                     required
                   />
@@ -330,7 +330,7 @@ export default function CreateRecipe() {
               name="tags"
               value={formData.tags}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500  text-black"
               placeholder="e.g., vegetarian, quick, dessert"
             />
           </div>
@@ -345,7 +345,7 @@ export default function CreateRecipe() {
               name="image"
               value={formData.image}
               onChange={handleInputChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500  text-black"
               placeholder="https://example.com/image.jpg"
             />
           </div>

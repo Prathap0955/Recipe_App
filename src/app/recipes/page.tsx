@@ -127,7 +127,7 @@ export default function Recipes() {
                   placeholder="Search recipes..."
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500  text-black"
                 />
               </div>
               
@@ -135,7 +135,7 @@ export default function Recipes() {
                 <select
                   value={cuisine}
                   onChange={(e) => setCuisine(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500  text-black"
                   aria-label="Select cuisine type"
                 >
                   <option value="">All Cuisines</option>
@@ -155,8 +155,8 @@ export default function Recipes() {
                 <select
                   value={difficulty}
                   onChange={(e) => setDifficulty(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
-                  aria-label="Select difficulty level"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500 text-black"
+                  aria-label="Select difficulty level  text-black"
                 >
                   <option value="">All Difficulties</option>
                   <option value="Easy">Easy</option>
@@ -175,7 +175,7 @@ export default function Recipes() {
                 <button
                   type="button"
                   onClick={resetFilters}
-                  className="px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
+                  className="px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors text-black"
                 >
                   Reset
                 </button>

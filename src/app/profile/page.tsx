@@ -191,7 +191,7 @@ export default function Profile() {
                 type="text"
                 value={editForm.name}
                 onChange={(e) => setEditForm(prev => ({ ...prev, name: e.target.value }))}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500 text-black"
               />
             </div>
             
@@ -203,7 +203,7 @@ export default function Profile() {
                 value={editForm.bio}
                 onChange={(e) => setEditForm(prev => ({ ...prev, bio: e.target.value }))}
                 rows={3}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500  text-black"
                 placeholder="Tell us about yourself..."
               />
             </div>
@@ -216,7 +216,7 @@ export default function Profile() {
                 type="url"
                 value={editForm.avatar}
                 onChange={(e) => setEditForm(prev => ({ ...prev, avatar: e.target.value }))}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500  text-black"
                 placeholder="https://example.com/avatar.jpg"
               />
             </div>
