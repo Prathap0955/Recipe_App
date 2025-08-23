@@ -5,6 +5,8 @@ export interface IUser extends mongoose.Document {
   name: string;
   email: string;
   password: string;
+  role: 'user' | 'admin';
+  isBlocked: boolean;
   avatar?: string;
   bio?: string;
   createdAt: Date;
@@ -34,6 +36,15 @@ const userSchema = new mongoose.Schema<IUser>({
     required: [true, 'Please provide a password'],
     minlength: [6, 'Password must be at least 6 characters'],
     select: false,
+  },
+  role: {
+    type: String,
+    enum: ['user', 'admin'],
+    default: 'user',
+  },
+  isBlocked: {
+    type: Boolean,
+    default: false,
   },
   avatar: {
     type: String,

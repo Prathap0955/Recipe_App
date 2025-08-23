@@ -6,13 +6,16 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "make-admin": "node scripts/makeFirstUserAdmin.js",
+    "reset-password": "node scripts/resetPassword.js"
   },
   "dependencies": {
     "@types/bcryptjs": "^3.0.0",
     "@types/jsonwebtoken": "^9.0.10",
     "@types/nodemailer": "^6.4.17",
     "bcryptjs": "^3.0.2",
+    "dotenv": "^16.4.5",
     "handlebars": "^4.7.8",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.16.1",

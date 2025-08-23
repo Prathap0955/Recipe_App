@@ -6,6 +6,8 @@ interface User {
   _id: string;
   name: string;
   email: string;
+  role: 'user' | 'admin';
+  isBlocked: boolean;
   avatar?: string;
   bio?: string;
   createdAt: string;
@@ -18,6 +20,7 @@ interface AuthContextType {
   register: (name: string, email: string, password: string) => Promise<void>;
   logout: () => void;
   loading: boolean;
+  isAdmin: boolean;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -112,6 +115,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     register,
     logout,
     loading,
+    isAdmin: user?.role === 'admin',
   };
 
   return (

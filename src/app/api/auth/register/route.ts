@@ -45,6 +45,8 @@ export async function POST(request: NextRequest) {
       _id: user._id,
       name: user.name,
       email: user.email,
+      role: user.role,
+      isBlocked: user.isBlocked,
       avatar: user.avatar,
       bio: user.bio,
       createdAt: user.createdAt,

@@ -3,7 +3,7 @@ import { verifyToken, extractTokenFromHeader } from '@/lib/jwt';
 import dbConnect from '@/lib/db';
 import User from '@/models/User';
 
-export async function authMiddleware(request: NextRequest) {
+export async function adminMiddleware(request: NextRequest) {
   try {
     const authHeader = request.headers.get('authorization');
     
@@ -28,10 +28,10 @@ export async function authMiddleware(request: NextRequest) {
       );
     }
 
-    // Check if user is blocked
-    if (user.isBlocked) {
+    // Check if user is admin
+    if (user.role !== 'admin') {
       return NextResponse.json(
-        { error: 'Your account has been blocked. Please contact support.' },
+        { error: 'Admin access required' },
         { status: 403 }
       );
     }
@@ -48,14 +48,17 @@ export async function authMiddleware(request: NextRequest) {
   }
 }
 
-export function withAuth(handler: Function) {
-  return async (request: NextRequest) => {
-    const authResult = await authMiddleware(request);
-    
-    if (authResult.status !== 200) {
-      return authResult;
+export function withAdmin(handler: Function) {
+  return async (request: NextRequest, context: any) => {
+    const adminResult = await adminMiddleware(request);
+
+    if (adminResult.status !== 200) {
+      return adminResult;
     }
-    
-    return handler(request);
+
+    // Forward both request and context
+    return handler(request, context);
   };
-} 
+}
+
+
